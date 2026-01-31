@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MisinfoX Extension</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <img id="brandLogo" src="assets/dark-mode.png" class="logo">
+
+    <div class="header-controls">
+      <button id="themeToggle" class="theme-btn">🌙</button>
+      <button id="powerButton" class="power-btn">⏻</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="card">
+      <div class="label">Enable Extension</div>
+      <label class="switch">
+        <input type="checkbox" id="enableToggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="card">
+      <div class="label">Auto-Analyze</div>
+      <label class="switch">
+        <input type="checkbox" id="autoAnalyzeToggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="card">
+      <div class="label">Highlight Suspicious</div>
+      <label class="switch">
+        <input type="checkbox" id="highlightToggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+  <footer>
+    <span>v1.0.0</span>
+    <a id="helpLink">Help & Support</a>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

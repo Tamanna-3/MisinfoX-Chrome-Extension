@@ -1,0 +1,222 @@
+/* ============================================================
+   DARK MODE — GLOWING PURPLE THEME
+   ============================================================ */
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 320px;
+  font-family: "Inter", sans-serif;
+
+  background: #0d0917 !important;
+  color: #ffffff !important;
+}
+
+/* ================= HEADER ================ */
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 14px;
+  position: relative;
+}
+
+.logo {
+  width: 165px;
+  filter: drop-shadow(0 0 14px rgba(139, 92, 246, 0.5));
+}
+
+.header-controls {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0px;
+}
+
+.theme-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #a78bfa;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 8px;
+  transition: 0.2s ease;
+}
+
+.theme-btn:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.power-btn {
+  background:none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 8px;
+  color: #ff4f4f;
+  transition: 0.3s ease;
+}
+
+.power-btn.active {
+  background: #002913;
+  color: #4ade80;
+}
+
+.power-btn:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* ================= CARDS ================== */
+
+main {
+  padding: 15px;
+}
+
+.card {
+  background: rgba(139, 92, 246, 0.1) !important;
+  padding: 13px 14px;
+  margin-bottom: 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  transition: 0.25s ease;
+}
+
+.card:hover {
+  background: rgba(139, 92, 246, 0.18) !important;
+  box-shadow: 0 0 18px rgba(139, 92, 246, 0.3);
+}
+
+.label {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* STATUS */
+.status {
+  font-size: 12px;
+  margin-left: 6px;
+  font-weight: 700;
+}
+
+.status.online {
+  color: #3bff7a;
+  text-shadow: 0 0 10px rgba(59, 255, 122, 0.5);
+}
+
+.status.offline {
+  color: #ff4f4f;
+  text-shadow: 0 0 10px rgba(255, 79, 79, 0.5);
+}
+
+/* SWITCHES */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  background: rgba(139, 92, 246, 0.25);
+  border-radius: 34px;
+  border: 1px solid rgba(139, 92, 246, 0.45);
+  transition: 0.3s;
+}
+
+.slider:before {
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  position: absolute;
+  border-radius: 50%;
+  background: #cfc3ff;
+  box-shadow: 0 0 10px rgba(180, 150, 255, 0.5);
+  transition: 0.3s;
+}
+
+input:checked + .slider {
+  background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
+  border-color: transparent;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+  background: #ffffff;
+}
+
+/* FOOTER */
+footer {
+  padding: 10px 15px;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  background: rgba(69, 31, 158, 0.4);
+}
+
+footer a {
+  color: #a78bfa;
+  cursor: pointer;
+}
+
+/* ============================================================
+   LIGHT MODE — CLEAN BRIGHT PURPLE THEME
+   ============================================================ */
+
+body.light {
+  background: #f0f0f3 !important;
+  color: #1a1a1a !important;
+}
+
+body.light .card {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border-color: rgba(0,0,0,0.1) !important;
+}
+
+body.light .slider {
+  background: rgba(180, 180, 180, 0.35) !important;
+  border: 1px solid #bbb !important;
+}
+
+body.light .slider:before {
+  background: #fff !important;
+}
+
+body.light input:checked + .slider {
+  background: linear-gradient(135deg, #6d28d9 0%, #a78bfa 100%) !important;
+}
+
+body.light footer {
+  background: rgba(200,200,200,0.6) !important;
+}
+
+body.light .theme-btn {
+  color: #6d28d9 !important;
+}
+
+body.light .power-btn {
+  color: #cc0000 !important;
+}
+
+body.light .status.online {
+  color: #2b8a3e !important;
+}
+
+body.light .status.offline {
+  color: #c92a2a !important;
+}

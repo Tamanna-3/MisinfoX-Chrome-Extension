@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MisinfoX Report</title>
+  <link rel="stylesheet" href="report.css" />
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>MisinfoX Analysis Report</h1>
+    <p>AI-Powered Content Verification</p>
+  </header>
+
+  <section class="verdict-card">
+    <div class="icon" id="verdictIcon">⏳</div>
+    <div>
+      <h2 id="verdictStatus">Analyzing...</h2>
+      <p id="verdictSummary"></p>
+    </div>
+  </section>
+
+  <section class="confidence">
+    <label>Confidence</label>
+    <div class="bar">
+      <div id="confidenceFill"></div>
+    </div>
+    <span id="confidenceText"></span>
+  </section>
+
+  <section class="badge" id="riskLevel"></section>
+
+  <section id="flagsSection" class="box hidden">
+    <h3>Detected Issues</h3>
+    <div id="flagsList"></div>
+  </section>
+
+ <h3>Recommendations</h3>
+<div id="recommendationsList"></div>
+
+    <h3>Analysis Details</h3>
+    <p><strong>Text:</strong> <span id="analyzedText"></span></p>
+    <p><strong>Time:</strong> <span id="analysisTime"></span></p>
+  </section>
+
+  <button onclick="window.close()">Close</button>
+</div>
+
+<script src="report.js"></script>
+</body>
+</html>
