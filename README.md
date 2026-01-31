@@ -18,11 +18,18 @@ Technology Stack
 -Browser Platform: Chrome Extensions API
 -Icons: Feather Icons
 
-Installation and Usage
-Clone or download the repository
-Open Google Chrome and navigate to chrome://extensions/
-Enable Developer Mode
-Click Load Unpacked and select the project directory
-Open any website
-Highlight text on the page and choose “Ask MisinfoX” from the context menu
+🧑‍💻 How to Use
+
+Clone or download this repository
+
+Open Chrome and go to chrome://extensions/
+
+Enable Developer Mode (top-right corner)
+
+Click Load Unpacked and select the project folder
+
+Visit any website
+
+Highlight text, right-click, and choose “Ask MisinfoX”
+
 View the credibility verdict instantly
