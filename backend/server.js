@@ -6,21 +6,16 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// --------------------------------------------------
-// SAFE FETCH FOR COMMONJS (Node 16+ / 18+ compatible)
-// --------------------------------------------------
 const fetch = (...args) =>
   import("node-fetch").then(({ default: fetch }) => fetch(...args));
 
-// --------------------------------------------------
+
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 const GEMINI_URL =
-  "https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=" +
+  "enter your api url here" +
   GEMINI_API_KEY;
 
-// --------------------------------------------------
-// BRAND ↔ DOMAIN MISMATCH
-// --------------------------------------------------
+
 function brandDomainMismatch(text) {
   const brandMap = {
     "bank of india": ["bankofindia.co.in"],
@@ -39,9 +34,6 @@ function brandDomainMismatch(text) {
   return false;
 }
 
-// --------------------------------------------------
-// RULE ENGINE (PRIMARY)
-// --------------------------------------------------
 function ruleEngine(text) {
   const t = text.toLowerCase();
   const mismatch = brandDomainMismatch(t);
@@ -137,9 +129,6 @@ function ruleEngine(text) {
   return null;
 }
 
-// --------------------------------------------------
-// GEMINI AI (OPTIONAL)
-// --------------------------------------------------
 async function aiAnalyze(text) {
   if (!GEMINI_API_KEY) return null;
 
@@ -185,9 +174,6 @@ ${text}
   }
 }
 
-// --------------------------------------------------
-// API
-// --------------------------------------------------
 app.post("/analyze", async (req, res) => {
   const text = (req.body.text || "").trim();
 
@@ -224,3 +210,4 @@ app.post("/analyze", async (req, res) => {
 app.listen(5000, () =>
   console.log("✅ MisinfoX backend running on http://localhost:5000")
 );
+
